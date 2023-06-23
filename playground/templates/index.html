@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+      <header><br><br>
+      </header>
+      <form method="POST">
+          {% csrf_token %}
+          <fieldset>
+              <legend>Risk Assessment Form</legend>
+              <div>
+                    <label for="id_requirements">Requirements</label>
+                    <input type="text" name="Requirements" id="id_requirements" autofocus required>
+              </div>
+              <div>
+                   <label for="id_project_category" >project Category</label>
+                   <select name="project Category" id="id_project_category" required>
+                       <option value="" selected disabled>choose an option</option>
+                       <option>transaction processing system</option>
+                       <option>management information system</option>
+                       <option>enterprise system</option>
+                       <option>safety critical system</option>
+                  </select>
+              </div>
+              <div>
+                  <label for="id_Requirement_Category">Requirement Category</label>
+                  <select name="Requirement Category" id="id_Requirement_Category" required>
+                      <option value="" selected disabled>choose an option</option>
+                      <option>functional</option>
+                      <option>usability</option>
+                      <option>reliability  availability</option>
+                      <option>performance</option>
+                      <option>security</option>
+                      <option>supportability</option>
+                      <option>constraints</option>
+                      <option>interfaces</option>
+                      <option>standards</option>
+                      <option>safety</option>
+                  </select>
+              </div>
+              <div>
+                  <label for="id_Risk_Target_Category">Risk Target Category</label>
+                  <select name="Risk Target Category" id="id_Risk_Target_Category" required>
+                      <option value="" selected disabled>choose an option</option>
+                      <option>budget</option>
+                      <option>quality</option>
+                      <option>schedule</option>
+                      <option>personal</option>
+                      <option>performance</option>
+                      <option>functionalvalidity</option>
+                      <option>project complexity</option>
+                      <option>planning  control</option>
+                      <option>team</option>
+                      <option>resource availability</option>
+                      <option>user</option>
+                      <option>requirement</option>
+                      <option>time dimension</option>
+                      <option>organizational environment</option>
+                      <option>cost</option>
+                      <option>design</option>
+                      <option>business</option>
+                      <option>overdrawn budget</option>
+                      <option>software</option>
+                      <option>process</option>
+                  </select>
+              </div>
+              <div>
+                  <label for="id_Probability">Probability</label>
+                  <input type="text" name="Probability" id="id_Probability" pattern="[0-9]+(\.[0-9]+)?" required>
+
+              </div>
+              <div>
+                  <label for="id_Magnitude_of_Risk">Magnitude of Risk</label>
+                  <select name="Magnitude of Risk" id="id_Magnitude_of_Risk" required>
+                      <option value="" selected disabled>choose an option</option>
+                      <option>Negligible</option>
+                      <option>Very Low</option>
+                      <option>Low</option>
+                      <option>Medium</option>
+                      <option>High</option>
+                      <option>Very High</option>
+                      <option>Extreme</option>
+                  </select>
+              </div>
+              <div>
+                 <label for="id_Impact">Impact</label>
+                  <select  name="Impact" id="id_Impact" required>
+                      <option value="" selected disabled>choose an option</option>
+                      <option>high</option>
+                      <option>catastrophic</option>
+                      <option>moderate</option>
+                      <option>Low</option>
+                      <option>insignificant</option>
+                  </select>
+              </div>
+
+              <div>
+                  <label for="id_Dimension_of_Risk">Dimension of Risk</label>
+                  <input type="text" name="Dimension of Risk" id="id_Dimension_of_Risk" required>
+              </div>
+              <div>
+                  <label for="id_Afftecting_No_of_Modules">Afftecting No of Modules</label>
+                  <input type="number" name="Afftecting No of Modules" id="id_Afftecting_No_of_Modules" required>
+              </div>
+              <div>
+                  <label for="id_Fixing_Duration">Fixing Duration (Days)</label>
+                  <input type="number" name="Fixing Duration" id="id_Fixing_Duration" required>
+              </div>
+              <div>
+                  <label for="id_Fix_Cost">Fix Cost (\% of Project)</label>
+                  <input type="number" name="Fix Cost" id="id_Fix_Cost" pattern="^\d{1,2}(\.\d+)?%?$" required>
+              </div>
+              <div>
+                  <label for="id_Priority">Priority</label>
+                  <input type="text" name="Priority" id="id_Priority" pattern="[0-9]+(\.[0-9]+)?" required>
+              </div>
+              <input type="submit" value="predict">
+          </fieldset>
+      </form>
+</body>
+</html>

@@ -1,0 +1,117 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Risks</title>
+  <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+          }
+          .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+          }
+          
+          h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+          }
+          
+          th, td {
+            padding: 10px;
+            text-align: left;
+          }
+          
+          th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+          }
+          
+          tr:nth-child(even) {
+            background-color: #fafafa;
+          }
+          
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+          }
+          
+          ul li {
+            margin-bottom: 10px;
+          }
+        </style>
+        </head>
+        <body>
+          <div class="container">
+            <h1>The risk level of the project is high, it's equal to {{ predict }}/5 </h1>
+            <table>
+                <tr>
+                  <th>Risk</th>
+                  <th>Recommendations</th>
+                </tr>
+                <tr>
+                  <td>Technical risk</td>
+                  <td>
+                    <ul>
+                      <li>Carry out an analysis of the software's complexity at the very start of the project to anticipate design and maintenance challenges.</li>
+                      <li>Assess the software's functional and non-functional requirements.</li>
+                      <li>Define a solid architecture and use static analysis tools to avoid duplication of code.</li>
+                      <li>Test the software regularly and implement regular security tests throughout development to identify and correct vulnerabilities.</li>
+                      <li>Use automated vulnerability scanning tools like Burp Suite, OWASP ZAP, etc.</li>
+                      <li>Add tools such as Jira, Trello, or Bugzilla to track detected vulnerabilities and their correction status.</li>
+                      <li>Ensure effective communication between the members of the development team to quickly resolve design and implementation problems.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>The risks associated with project management</td>
+                  <td>
+                    <ul>
+                      <li>Plan the project realistically, taking into account the workload of each member of the development team.</li>
+                      <li>Define project objectives, identify tasks, estimate task duration, determine dependencies, and monitor progress.</li>
+                      <li>Establish clear and regular communication with stakeholders to maintain a common vision of the project.</li>
+                      <li>Assess the project scope on an ongoing basis and revise it accordingly to avoid spill-over.</li>
+                      <li>Set up training courses for team members on risk management, time management, and conflict management.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Commercial risks</td>
+                  <td>
+                    <ul>
+                      <li>Draw up a realistic budget and carry out regular monitoring to avoid cost overruns.</li>
+                      <li>Involve stakeholders in defining the project to meet their expectations.</li>
+                      <li>Monitor market trends to anticipate changes and adapt software development accordingly</li>
+                      <li>Establish clear policies for managing conflicts and issues, including protocols for resolving conflicts between team members and with external stakeholders.</li>
+                      </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Human risks</td>
+        <td>
+          <ul>
+            <li>Recruit members of the development team with the skills needed to meet the project's technical and organizational challenges.</li>
+            <li>Establish a training plan for members of the development team to enhance their skills.</li>
+            <li>Maintain a positive working environment to motivate the team and reduce turnover.</li>
+            <li>Offer development opportunities to team members to strengthen their commitment and motivation.</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>
+              
